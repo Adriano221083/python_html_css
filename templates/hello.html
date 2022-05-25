@@ -2,6 +2,11 @@
     <head>
     </head>
     <body>
-        <h1>Hello World!</h1>
+       <h1 id="titulo"><span>Hello</span></h1>h1> 
+       {% for entrada in entradas %}
+       <h2> {{ entrada.titulo }} </h2>
+       <p >  {{ entrada.texto }} </p> 
+       {% endfor %}
+            
     </body>
 </html>

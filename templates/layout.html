@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <div class="Pagina">
+            <h1>Meu Projeto</h1>
+            <div class="metanav">
+               {% if not session.logado %}
+               <a href="">login</a>
+               {% else %}
+               <a href="">logout</a>
+            {% endif %}
+          </div>
+          {% for mensagem in get_flashed_messages() %}
+          <div class="flash"> {{ mensagem }} </div>
+          {% end for %}
+          {% block corpo %} {% endblock %}
+        </div>
+    </body>
+</html>
